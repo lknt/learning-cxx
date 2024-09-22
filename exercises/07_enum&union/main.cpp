@@ -7,7 +7,7 @@
 // 这些标识符不需要前缀，可以直接引用。
 // 因此 `enum` 定义会污染命名空间。
 enum ColorEnum : unsigned char {
-    COLOR_RED = 31,
+    COLOR_RED = 'a',
     COLOR_GREEN,
     COLOR_YELLOW,
     COLOR_BLUE,
@@ -37,7 +37,7 @@ ColorEnum convert_by_pun(Color c) {
 
     TypePun pun;
     // TODO: 补全类型双关转换
-
+    pun.c = c;
     return pun.e;
 }
 
